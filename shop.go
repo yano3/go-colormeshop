@@ -41,7 +41,7 @@ type Shop struct {
 }
 
 func (c *Client) Shop() (*Shop, error) {
-	resp, err := c.get("/v1/shop.json?fields=id")
+	resp, err := c.get("/v1/shop.json")
 	if err != nil {
 		return nil, err
 	}
