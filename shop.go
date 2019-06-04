@@ -46,10 +46,10 @@ func (c *Client) Shop() (*Shop, error) {
 		return nil, err
 	}
 
-	var s ShopContainer
-	if err := decodeJSON(resp, &s); err != nil {
+	var con ShopContainer
+	if err := decodeJSON(resp, &con); err != nil {
 		return nil, err
 	}
 
-	return &s.Shop, nil
+	return &con.Shop, nil
 }
