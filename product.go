@@ -8,6 +8,10 @@ type ProductContainer struct {
 	Product Product `json:"product"`
 }
 
+type ProductsContainer struct {
+	Products []Product `json:"products"`
+}
+
 type Product struct {
 	ID                int64     `json:"id,omitempty"`
 	AccountID         string    `json:"account_id,omitempty"`
@@ -104,4 +108,18 @@ func (c *Client) Product(id int64) (*Product, error) {
 	}
 
 	return &con.Product, nil
+}
+
+func (c *Client) Products() (*[]Product, error) {
+	resp, err := c.get("/v1/products.json")
+	if err != nil {
+		return nil, err
+	}
+
+	var con ProductsContainer
+	if err := decodeJSON(resp, &con); err != nil {
+		return nil, err
+	}
+
+	return &con.Products, nil
 }
