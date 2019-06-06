@@ -95,6 +95,20 @@ type Pickup struct {
 	UpdateDate int   `json:"update_date,omitempty"`
 }
 
+type ProductImagesContainer struct {
+	ProductImages ProductImages `json:"product"`
+}
+
+type ProductImages struct {
+	ID     int64          `json:"id,omitempty"`
+	Images []ProductImage `json:"images,omitempty"`
+}
+
+type ProductImage struct {
+	Name string `json:"name,omitempty"`
+	URL  string `json:"url,omitempty"`
+}
+
 func (c *Client) Product(id int64) (*Product, error) {
 	pid := strconv.FormatInt(id, 10)
 	resp, err := c.get("/v1/products/" + pid + ".json")
@@ -122,4 +136,19 @@ func (c *Client) Products() (*[]Product, error) {
 	}
 
 	return &con.Products, nil
+}
+
+func (c *Client) ProductImages(id int64) (*ProductImages, error) {
+	pid := strconv.FormatInt(id, 10)
+	resp, err := c.get("/v1/products/" + pid + "/images.json")
+	if err != nil {
+		return nil, err
+	}
+
+	var con ProductImagesContainer
+	if err := decodeJSON(resp, &con); err != nil {
+		return nil, err
+	}
+
+	return &con.ProductImages, nil
 }
