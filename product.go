@@ -17,7 +17,7 @@ type Product struct {
 	AccountID         string    `json:"account_id,omitempty"`
 	Name              string    `json:"name,omitempty"`
 	Category          Category  `json:category,omitempty"`
-	GroupIds          []int64   `json:"group_ids,omitempty"`
+	GroupIDs          []int64   `json:"group_ids,omitempty"`
 	DisplayState      string    `json:"display_state,omitempty"`
 	SalesPrice        *int64    `json:"sales_price,omitempty"`
 	Price             *int64    `json:"price,omitempty"`
