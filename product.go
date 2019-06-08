@@ -70,22 +70,22 @@ type Option struct {
 }
 
 type Variant struct {
-	ProductID                     int64   `json:"product_id,omitempty"`
-	AccountID                     string  `json:"account_id,omitempty"`
-	Option1Value                  string  `json:"option1_value,omitempty"`
-	Option2Value                  string  `json:"option2_value,omitempty"`
-	Title                         string  `json:"title,omitempty"`
-	Stocks                        *int64  `json:"stocks,omitempty"`
-	ModelNumber                   *string `json:"model_number,omitempty"`
-	FewNum                        *int64  `json:"few_num,omitempty"`
-	OptionPrice                   *int64  `json:"option_price,omitempty"`
-	OptionPriceIncludingTax       *int64  `json:"option_price_including_tax,omitempty"`
-	OptionPriceTax                *int64  `json:"option_price_tax,omitempty"`
-	OptionMemberPrice             *int64  `json:"option_members_price,omitempty"`
-	OptionMemberPriceIncludingTax *int64  `json:"option_members_price_including_tax,omitempty"`
-	OptionMemberPriceTax          *int64  `json:"option_members_price_tax,omitempty"`
-	MakeDate                      int     `json:"make_date,omitempty"`
-	UpdateDate                    int     `json:"update_date,omitempty"`
+	ProductID                     int64  `json:"product_id,omitempty"`
+	AccountID                     string `json:"account_id,omitempty"`
+	Option1Value                  string `json:"option1_value,omitempty"`
+	Option2Value                  string `json:"option2_value,omitempty"`
+	Title                         string `json:"title,omitempty"`
+	Stocks                        *int64 `json:"stocks,omitempty"`
+	ModelNumber                   string `json:"model_number,omitempty"`
+	FewNum                        *int64 `json:"few_num,omitempty"`
+	OptionPrice                   *int64 `json:"option_price,omitempty"`
+	OptionPriceIncludingTax       *int64 `json:"option_price_including_tax,omitempty"`
+	OptionPriceTax                *int64 `json:"option_price_tax,omitempty"`
+	OptionMemberPrice             *int64 `json:"option_members_price,omitempty"`
+	OptionMemberPriceIncludingTax *int64 `json:"option_members_price_including_tax,omitempty"`
+	OptionMemberPriceTax          *int64 `json:"option_members_price_tax,omitempty"`
+	MakeDate                      int    `json:"make_date,omitempty"`
+	UpdateDate                    int    `json:"update_date,omitempty"`
 }
 
 type Pickup struct {
