@@ -1,9 +1,5 @@
-deps:
-	go get -d -t ./...
-
-test: deps
+test:
 	go test -v
 
 lint:
 	go vet
-	golint -set_exit_status
