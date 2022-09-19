@@ -16,7 +16,7 @@ type Product struct {
 	ID                int64     `json:"id,omitempty"`
 	AccountID         string    `json:"account_id,omitempty"`
 	Name              string    `json:"name,omitempty"`
-	Category          Category  `json:category,omitempty"`
+	Category          Category  `json:"category,omitempty"`
 	GroupIDs          []int64   `json:"group_ids,omitempty"`
 	DisplayState      string    `json:"display_state,omitempty"`
 	SalesPrice        *int64    `json:"sales_price,omitempty"`
@@ -43,10 +43,10 @@ type Product struct {
 	UpdateDate        int       `json:"update_date,omitempty"`
 	ImageURL          string    `json:"image_url,omitempty"`
 	ThumbnailImageURL string    `json:"thumbnail_image_url,omitempty"`
-	Images            []Image   `json:images,omitempty"`
-	Options           []Option  `json:options,omitempty"`
-	Variants          []Variant `json:variants,omitempty"`
-	Pickups           []Pickup  `json:pickups,omitempty"`
+	Images            []Image   `json:"images,omitempty"`
+	Options           []Option  `json:"options,omitempty"`
+	Variants          []Variant `json:"variants,omitempty"`
+	Pickups           []Pickup  `json:"pickups,omitempty"`
 }
 
 type Category struct {
