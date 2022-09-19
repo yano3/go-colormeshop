@@ -45,7 +45,7 @@ type Sale struct {
 	ProductTotalPrice     int64          `json:"product_total_price,omitempty"`
 	DeliveryTotalCharge   int64          `json:"delivery_total_charge,omitempty"`
 	Tax                   int64          `json:"tax,omitempty"`
-	fee                   int64          `json:"fee,omitempty"`
+	Fee                   int64          `json:"fee,omitempty"`
 	NoshiTotalCharge      int64          `json:"noshi_total_charge,omitempty"`
 	CardTotalCharge       int64          `json:"card_total_charge,omitempty"`
 	WrappingTotalCharge   int64          `json:"wrapping_total_charge,omitempty"`
@@ -53,7 +53,7 @@ type Sale struct {
 	GMOPointDiscount      int64          `json:"gmo_point_discount,omitempty"`
 	OtherDiscount         int64          `json:"other_discount,omitempty"`
 	OtherDiscount_name    string         `json:"other_discount_name,omitempty"`
-	total_price           int64          `json:"other_discount,omitempty"`
+	TotalPrice            int64          `json:"total_price,omitempty"`
 	GrantedPoints         int64          `json:"granted_points,omitempty"`
 	UsePoints             int64          `json:"use_points,omitempty"`
 	GrantedGMOPoints      int64          `json:"granted_gmo_points,omitempty"`
